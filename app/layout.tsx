@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' className={`${ibmPlexSans.variable} antialiased`}>
-			<body className='select-none'>
+			<body className='select-none overflow-x-hidden'>
 				<Navbar />
 				{children}
 				<Footer />

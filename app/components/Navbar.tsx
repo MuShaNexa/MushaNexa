@@ -1,31 +1,43 @@
-import { Tally4 } from 'lucide-react';
-import Image from 'next/image';
+'use client';
+
+import { Tally4, X } from 'lucide-react';
+import NavbarLogo from './navbar/NavbarLogo';
+import NavbarLinks from './navbar/NavbarLinks';
+import { useState } from 'react';
+import Button from './Button';
 
 const Navbar = () => {
-	const navLinks = ['about', 'services', 'work'];
+	const [mobileMenu, setmobileMenu] = useState(false);
 	return (
-		<nav className='bg-dark text-white relative'>
+		<nav className='bg-dark text-white sticky top-0 z-[1000]'>
 			<div className='container mx-auto px-4 flex justify-between items-center gap-6 h-20'>
-				{/* logo */}
-				<div className='h-12 w-12 flex justify-center items-center'>
-					<Image src='/logo_white.png' alt='logo' width={48} height={48} />
-				</div>
-				{/* links */}
-				<ul className='hidden l:flex lg:absolute lg:top-1/2 lg:left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-black font-semibold gap-12 py-2 px-6 rounded'>
-					{navLinks.map((link, idx) => (
-						<li key={idx}>
-							<a href={`#${link}`} className='uppercase'>
-								{link}
-							</a>
-						</li>
-					))}
+				<NavbarLogo />
+				<NavbarLinks />
+				<Button />
+				{ mobileMenu ? (
+					<X
+						className='lg:hidden'
+						onClick={() => setmobileMenu(!mobileMenu)}
+					/>
+				) : <Tally4
+						className='rotate-90 lg:hidden'
+						onClick={() => setmobileMenu(!mobileMenu)}
+					/> }
+			</div>
+			<div
+				className={`absolute bg-dark p-16 z-10 w-full flex justify-center items-center lg:hidden text-center text-3xl sm:text-4xl transition-opacity duration-1000 ${mobileMenu ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+			>
+				<ul className='flex flex-col gap-16'>
+					<li onClick={() => setmobileMenu(false)}>
+						<a href='#about'>About</a>
+					</li>
+					<li onClick={() => setmobileMenu(false)}>
+						<a href='#services'>Services</a>
+					</li>
+					<li onClick={() => setmobileMenu(false)}>
+						<a href='#work'>Work</a>
+					</li>
 				</ul>
-				{/* cta */}
-				<a href='#contact' className='ml-auto button hidden'>
-					Contact
-				</a>
-				{/* hamburger */}
-				<Tally4 className='rotate-90' />
 			</div>
 		</nav>
 	);

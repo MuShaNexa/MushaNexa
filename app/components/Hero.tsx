@@ -30,7 +30,7 @@ const Hero = () => {
 					<p className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center font-mono'>
 						Serving businesses of all sizes across India and worldwide
 					</p>
-					<Button />
+					{/* <Button /> */}
 				</div>
 			</div>
 		</section>
