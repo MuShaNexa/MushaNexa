@@ -112,10 +112,10 @@ const ContactForm = () => {
 						</select>
 					</div>
 				</div>
-				{/* budget range - Under $2000, $2000-$10000, $10000-$50000, $50000+, Not sure */}
+				{/* budget range */}
 				<div className='grid gap-2'>
 					<label htmlFor='budget' className='font-medium'>
-						Budget Range<span className='text-red-600'>*</span>
+						Budget Range
 					</label>
 					<div className='flex items-center gap-4 shadow-md border border-zinc-100 px-2 rounded'>
 						<DollarSign />
@@ -125,7 +125,6 @@ const ContactForm = () => {
 							value={budget}
 							onChange={(e) => setBudget(e.target.value)}
 							className='p-2 flex-1 outline-none '
-							required
 						>
 							<option value=''>Select a budget range</option>
 							<option value='under-2000'>Under $2000</option>
@@ -136,10 +135,10 @@ const ContactForm = () => {
 						</select>
 					</div>
 				</div>
-				{/* project timeline - asap (1-2 weeks) 1-2 months 2-3 months flexible */}
+				{/* project timeline */}
 				<div className='grid gap-2'>
 					<label htmlFor='timeline' className='font-medium'>
-						Project Timeline<span className='text-red-600'>*</span>
+						Project Timeline
 					</label>
 					<div className='flex items-center gap-4 shadow-md border border-zinc-100 px-2 rounded'>
 						<Timer />
@@ -149,7 +148,6 @@ const ContactForm = () => {
 							value={timeline}
 							onChange={(e) => setTimeline(e.target.value)}
 							className='p-2 flex-1 outline-none '
-							required
 						>
 							<option value=''>Select a timeline</option>
 							<option value='asap'>Asap (1-2 weeks)</option>
