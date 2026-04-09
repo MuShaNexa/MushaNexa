@@ -5,30 +5,35 @@ const Services = () => {
 		{
 			id: 1,
 			serviceName: 'Web Design',
+			image: '/figma.png',
 			description:
 				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
 		},
 		{
 			id: 2,
 			serviceName: 'Web Development',
+			image: '/nextjs.webp',
 			description:
 				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
 		},
 		{
 			id: 3,
 			serviceName: 'Drupal Development',
+			image: '/drupal.png',
 			description:
 				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
 		},
 		{
 			id: 4,
 			serviceName: 'Wordpress Development',
+			image: '/wordpress.png',
 			description:
 				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
 		},
 		{
 			id: 5,
 			serviceName: 'SEO Optimization',
+			image: '/seo.png',
 			description:
 				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
 		},
@@ -42,17 +47,25 @@ const Services = () => {
 				{services.map((service) => (
 					<div
 						key={service.id}
-						className='relative grid gap-4 group py-6 hover:py-12 hover:px-4 overflow-hidden transition-all duration-150 border-b border-zinc-300 hover:text-white lg:grid-cols-12'
+						className='relative grid gap-4 group py-6 hover:py-12 hover:px-4 overflow-hidden transition-all duration-700 border-b border-zinc-300 hover:text-white lg:grid-cols-12'
 					>
-						<div className='font-semibold lg:col-span-1'>0{service.id}</div>
-						<h3 className='font-bold text-xl md:text-2xl lg:text-3xl col-span-4'>
+						<div className='font-semibold lg:col-span-1 text-3xl'>
+							0{service.id}
+						</div>
+						<h3 className='font-bold text-xl md:text-2xl lg:text-3xl col-span-4 self-center lg:self-start'>
 							{service.serviceName}
 						</h3>
-						<Image src="/banner_img.png" alt="fg" width={100} height={100} className='col-span-2 border opacity-0 group-hover:opacity-100 transition-all duration-700' />
-						<p className='text-lg md:text-xl xl:text-2xl font-light col-span-5'>
+						<Image
+							src={service.image}
+							alt='fg'
+							width={100}
+							height={100}
+							className='col-span-2 border opacity-0 group-hover:opacity-100 transition-all duration-700 hidden lg:block'
+						/>
+						<p className='text-lg md:text-xl lg:text-2xl font-light col-span-5'>
 							{service.description}
 						</p>
-						<div className='absolute -top-full left-0 w-full -translate-yfull group-hover:translate-y-full h-full bg-green-600 -z-10 transition-all duration-500'></div>
+						<div className='absolute -top-full left-0 w-full -translate-yfull group-hover:translate-y-full h-full bg-green-600 -z-10 transition-all duration-700'></div>
 					</div>
 				))}
 			</div>

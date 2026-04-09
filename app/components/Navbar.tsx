@@ -15,10 +15,10 @@ const Navbar = () => {
 				<NavbarLinks />
 				<Button />
 				{mobileMenu ? (
-					<X className='lg:hidden' onClick={() => setmobileMenu(!mobileMenu)} />
+					<X className='lg:hidden cursor-pointer' onClick={() => setmobileMenu(!mobileMenu)} />
 				) : (
 					<Tally4
-						className='rotate-90 lg:hidden'
+						className='rotate-90 lg:hidden cursor-pointer'
 						onClick={() => setmobileMenu(!mobileMenu)}
 					/>
 				)}

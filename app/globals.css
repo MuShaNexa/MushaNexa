@@ -108,3 +108,29 @@ body {
 		background-color: #be123c;
 	}
 }
+
+body {
+	--sb-track-color: #a684ff;
+	--sb-thumb-color: #ff0000;
+	--sb-size: 4px;
+}
+
+body::-webkit-scrollbar {
+	width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--sb-track-color);
+	border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb-color);
+	border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+	body {
+		scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+	}
+}
