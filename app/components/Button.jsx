@@ -1,7 +1,7 @@
 const Button = () => {
 	return (
 		<a
-			href={`#`}
+			href={`#contact`}
 			className={`uppercase font-semibold block py-2 px-8 bg-transparent animated-blob rounded-full ml-auto lg:ml-16 sm:mr-4 md:mr-12`}
 		>
 			Contact

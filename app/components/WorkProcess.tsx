@@ -44,7 +44,7 @@ const WorkProcess = () => {
 				'Deploy to production, post-launch support, and ongoing maintenance',
 		},
 	];
-	const images = ['/figma.png','/nextjs.webp','/drupal.png','/wordpress.png','/seo.png'];
+	const images = ['/figma.webp','/next.webp','/drupal.webp','/wordpress.webp','/seo.webp'];
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 	useEffect(() => {
 		const interval = setInterval(() => {

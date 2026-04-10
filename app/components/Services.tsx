@@ -5,41 +5,41 @@ const Services = () => {
 		{
 			id: 1,
 			serviceName: 'Web Design',
-			image: '/figma.png',
+			image: '/figma.webp',
 			description:
-				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
+				'Crafting intuitive, brand-led web design with modern layouts, strong visual hierarchy, and mobile-first user experiences.',
 		},
 		{
 			id: 2,
 			serviceName: 'Web Development',
-			image: '/nextjs.webp',
+			image: '/next.webp',
 			description:
-				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
+				'Building fast, scalable websites using modern frameworks, clean architecture, and best-practice front-end development.',
 		},
 		{
 			id: 3,
 			serviceName: 'Drupal Development',
-			image: '/drupal.png',
+			image: '/drupal.webp',
 			description:
-				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
+				'Delivering robust Drupal solutions for complex content management, custom modules, and enterprise-grade digital platforms.',
 		},
 		{
 			id: 4,
 			serviceName: 'Wordpress Development',
-			image: '/wordpress.png',
+			image: '/wordpress.webp',
 			description:
-				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
+				'Creating flexible WordPress websites tailored for brands, eCommerce, and easy content updates without sacrificing performance.',
 		},
 		{
 			id: 5,
 			serviceName: 'SEO Optimization',
-			image: '/seo.png',
+			image: '/seo.webp',
 			description:
-				'Our development services are designed to help businesses transform ideas into high-quality digital solutions.',
+				'Improving search visibility through technical SEO, on-page optimization, and content strategies that drive organic traffic.',
 		},
 	];
 	return (
-		<section className='container mx-auto px-4 py-12 md:py-16 lg:py-32'>
+		<section id='services' className='container mx-auto px-4 py-12 md:py-16 lg:py-32'>
 			<h2 className='uppercase font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl lg:col-span-3 '>
 				services
 			</h2>
@@ -60,7 +60,7 @@ const Services = () => {
 							alt='fg'
 							width={100}
 							height={100}
-							className='col-span-2 border opacity-0 group-hover:opacity-100 transition-all duration-700 hidden lg:block'
+							className='col-span-2 w-24 h-24 opacity-0 group-hover:opacity-100 transition-all duration-700 hidden lg:block'
 						/>
 						<p className='text-lg md:text-xl lg:text-2xl font-light col-span-5'>
 							{service.description}
