@@ -4,7 +4,6 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { cn } from "@/lib/utils";
-import SplashCursor from '@/components/SplashCursor';
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
